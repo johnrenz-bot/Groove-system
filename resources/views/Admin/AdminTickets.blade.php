@@ -57,11 +57,11 @@
 
       {{-- Nav --}}
       <nav class="flex flex-col space-y-1 text-sm font-medium p-1">
-        <a href="/admin/dashboard"
+        <a href="dashboard"
            class="flex items-center px-4 py-2 rounded-lg {{ request()->is('admin/dashboard*') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
           <i class="fas fa-home mr-3 w-5 opacity-70"></i> Dashboard
         </a>
-        <a href="{{ route('Adminusers') }}"
+        <a href="{{ route('admin.users') }}"
            class="flex items-center px-4 py-2 rounded-lg {{ request()->is('admin/users*') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
           <i class="fas fa-users mr-3 w-5 opacity-70"></i> Users
         </a>
@@ -69,14 +69,14 @@
            class="flex items-center px-4 py-2 rounded-lg {{ request()->is('admin/control*') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
           <i class="fas fa-layer-group mr-3 w-5 opacity-70"></i> Control
         </a>
-        <a href="{{ route('Admintransaction') }}"
+        <a href="{{ route('admin.transaction') }}"
            class="flex items-center px-4 py-2 rounded-lg {{ request()->is('admin/transaction*') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
           <i class="fas fa-receipt mr-3 w-5 opacity-70"></i> Transactions
         </a>
 
         {{-- Tickets (active) --}}
-        <a href="{{ route('admin.Admintickets') }}"
-           class="flex items-center px-4 py-2 rounded-lg {{ request()->routeIs('admin.Admintickets') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
+        <a href="{{ route('admin.tickets') }}"
+           class="flex items-center px-4 py-2 rounded-lg {{ request()->routeIs('admin.tickets') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
           <i class="fas fa-ticket-alt mr-3 w-5 opacity-70"></i> Tickets
          
         </a>

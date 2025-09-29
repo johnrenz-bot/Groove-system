@@ -166,7 +166,7 @@
                             <i class="fa-regular fa-user text-primary"></i>
                             <span class="text-sm">Profile</span>
                         </a>
-                        <a href="/client/profile/EDIT"
+                        <a href="/client/profile/edit"
                            class="flex items-center gap-2 text-fg/80 hover:text-fg hover:bg-layer px-3 py-1.5 rounded-xl transition shadow-sm">
                             <i class="fa-solid fa-gear text-primary"></i>
                             <span class="text-sm">Settings</span>
@@ -525,6 +525,7 @@
                         </form>
                     @endif
                 </section>
+
                 @endif
 
                 <section x-show="tab==='feedback'" x-transition class="lg:col-span-2 space-y-5">

@@ -111,7 +111,7 @@
         <nav class="hidden md:flex space-x-4 text-sm font-medium">
             <a href="/coach/home"
                class="relative px-4 py-2 rounded-xl text-fg/70 hover:text-fg hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">Home</a>
-            <a href="{{ route('Talent') }}"
+            <a href="{{ route('talents') }}"
                class="relative px-4 py-2 rounded-xl text-fg/70 hover:text-fg hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">Talents</a>
             <a href="{{ route('about') }}"
                class="relative px-4 py-2 rounded-xl text-fg/70 hover:text-fg hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">About</a>
@@ -185,12 +185,12 @@
                     </div>
 
                     <div class="flex flex-col px-3 py-2 space-y-1">
-                        <a href="{{ route('Profile') }}"
+                        <a href="{{ route('coach.profile') }}"
                            class="flex items-center gap-2 text-fg/80 hover:text-fg hover:bg-layer px-3 py-1.5 rounded-xl transition shadow-sm">
                             <i class="fa-regular fa-user text-primary"></i>
                             <span class="text-sm">Profile</span>
                         </a>
-                        <a href="/coach/profile/EDIT"
+                        <a href="{{ route('coach.profile.edit') }}"
                            class="flex items-center gap-2 text-fg/80 hover:text-fg hover:bg-layer px-3 py-1.5 rounded-xl transition shadow-sm">
                             <i class="fa-solid fa-gear text-primary"></i>
                             <span class="text-sm">Settings</span>
@@ -218,7 +218,7 @@
                     </summary>
                     <div class="absolute right-8 mt-2 w-60 rounded-2xl border border-divider/40 bg-card/95 backdrop-blur-md shadow-xl p-2 z-50">
                         <a href="/coach/home" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-fg/80 hover:bg-layer">Home</a>
-                        <a href="{{ route('Talent') }}" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-fg/80 hover:bg-layer">Talents</a>
+                        <a href="{{ route('talents') }}" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-fg/80 hover:bg-layer">Talents</a>
                         <a href="{{ route('about') }}" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-fg/80 hover:bg-layer">About</a>
                         <a href="{{ route('messages.index') }}" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-fg/80 hover:bg-layer">Messages</a>
                     </div>

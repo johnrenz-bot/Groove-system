@@ -85,7 +85,7 @@
            class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
           Home
         </a>
-        <a href="{{ route('Talent') }}"
+        <a href="{{ route('talents') }}"
            class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
           Talents
         </a>
@@ -143,8 +143,8 @@
                 <p class="text-xs text-muted mt-0.5">#{{ $coach->coach_id ?? '0000' }} • {{ ucfirst($coach->role ?? 'coach') }}</p>
               </div>
               <div class="flex flex-col px-3 py-2">
-                <a href="{{ route('Profile') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-regular fa-user text-muted text-sm"></i><span class="text-sm">Profile</span></a>
-                <a href="{{ route('PROFILE.EDIT') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-solid fa-gear text-muted text-sm"></i><span class="text-sm">Settings</span></a>
+                <a href="{{ route('coach.profile') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-regular fa-user text-muted text-sm"></i><span class="text-sm">Profile</span></a>
+                <a href="{{ route('coach.profile.edit') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-solid fa-gear text-muted text-sm"></i><span class="text-sm">Settings</span></a>
               </div>
               <div class="border-t border-ui px-3 py-2">
                 <form method="POST" action="{{ route('logout') }}">@csrf
@@ -177,7 +177,7 @@
         Ready to explore your next dance adventure? Watch the feature, connect with coaches & choreographers, and keep growing.
       </p>
       <div class="mt-4 flex items-center justify-center gap-3">
-        <a href="{{ route('Talent') }}" class="px-4 py-2 rounded-xl text-sm font-semibold bg-primary text-fg hover:bg-primary/90">Explore Talents</a>
+        <a href="{{ route('talents') }}" class="px-4 py-2 rounded-xl text-sm font-semibold bg-primary text-fg hover:bg-primary/90">Explore Talents</a>
         <a href="{{ route('messages.index') }}" class="px-4 py-2 rounded-xl border border-slate-300 text-sm bg-card/70 hover:bg-layer">Messages</a>
       </div>
     </div>

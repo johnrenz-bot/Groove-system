@@ -21,7 +21,7 @@ class LoginController extends Controller
     // ---------------------------
     public function showLoginForm()
     {
-        if (Auth::guard('admin')->check())  return redirect()->route('admin.AdminDashboard');
+        if (Auth::guard('admin')->check())  return redirect()->route('admin.dashboard');
         if (Auth::guard('client')->check()) return redirect()->route('client.home');
         if (Auth::guard('coach')->check())  return redirect()->route('coach.home');
         return view('login');
@@ -44,7 +44,7 @@ class LoginController extends Controller
             session(['require_admin_passcode' => true]);
             app(\App\Http\Controllers\AdminController::class)->issuePasscode($admin);
 
-            return redirect()->route('admin.AdminDashboard');
+            return redirect()->route('admin.dashboard');
         }
 
         // Client login

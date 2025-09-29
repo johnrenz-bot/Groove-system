@@ -81,7 +81,7 @@
           <div>
             <div class="flex items-center justify-between">
               <label class="block text-xs uppercase tracking-wider text-zinc-400">Password</label>
-              <a href="{{ route('ForgetPassword') }}" class="text-xs text-zinc-300 hover:text-white underline-offset-4 hover:underline">
+              <a href="{{ route('forget.password') }}" class="text-xs text-zinc-300 hover:text-white underline-offset-4 hover:underline">
                 Forgot Password?
               </a>
             </div>

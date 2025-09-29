@@ -217,7 +217,7 @@
                  class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition">
                 <i class="fa-regular fa-user opacity-70 text-sm"></i><span class="text-sm">Profile</span>
               </a>
-              <a href="/client/profile/EDIT"
+              <a href="/client/profile/edit"
                  class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition">
                 <i class="fa-solid fa-gear opacity-70 text-sm"></i><span class="text-sm">Settings</span>
               </a>
@@ -485,10 +485,8 @@
         @endforelse
       </section>
 
-      <!-- Coaches & Talents -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Top Coaches -->
-           <!-- Top Coaches -->
+       
 <div class="border border-divider/40 rounded-3xl p-5 sm:p-6 shadow-sm bg-card">
   <h4 class="text-lg font-semibold mb-4 sm:mb-6">Top Coaches</h4>
 

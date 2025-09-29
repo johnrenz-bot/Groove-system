@@ -49,7 +49,7 @@ $initials = $client ? strtoupper(substr($client->firstname,0,1) . substr($client
              class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
             Home
           </a>
-          <a href="{{ route('Talent') }}"
+          <a href="{{ route('talents') }}"
              class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
             Talents
           </a>
@@ -106,8 +106,8 @@ $initials = $client ? strtoupper(substr($client->firstname,0,1) . substr($client
                 <p class="text-xs text-muted mt-0.5">#{{ $coach->coach_id ?? '0000' }} • {{ ucfirst($coach->role ?? 'coach') }}</p>
               </div>
               <div class="flex flex-col px-3 py-2">
-                <a href="{{ route('Profile') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-regular fa-user text-muted text-sm"></i><span class="text-sm">Profile</span></a>
-                <a href="{{ route('PROFILE.EDIT') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-solid fa-gear text-muted text-sm"></i><span class="text-sm">Settings</span></a>
+                <a href="{{ route('coach.profile') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-regular fa-user text-muted text-sm"></i><span class="text-sm">Profile</span></a>
+                <a href="{{ route('coach.profile.edit') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-solid fa-gear text-muted text-sm"></i><span class="text-sm">Settings</span></a>
               </div>
               <div class="border-t border-ui px-3 py-2">
                 <form method="POST" action="{{ route('logout') }}">@csrf

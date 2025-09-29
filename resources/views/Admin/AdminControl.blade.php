@@ -48,22 +48,22 @@
       </div>
 
       <nav class="flex flex-col space-y-1 text-sm font-medium p-3">
-        <a href="/admin/dashboard" class="flex items-center px-4 py-2 rounded-lg text-foreground/80 hover:text-foreground hover:bg-layer transition">
+        <a href="dashboard" class="flex items-center px-4 py-2 rounded-lg text-foreground/80 hover:text-foreground hover:bg-layer transition">
           <i class="fas fa-home mr-3 w-5 opacity-70"></i> Dashboard
         </a>
-        <a href="{{ route('Adminusers') }}" class="flex items-center px-4 py-2 rounded-lg text-foreground/80 hover:text-foreground hover:bg-layer transition">
+        <a href="{{ route('admin.users') }}" class="flex items-center px-4 py-2 rounded-lg text-foreground/80 hover:text-foreground hover:bg-layer transition">
           <i class="fas fa-users mr-3 w-5 opacity-70"></i> Users
         </a>
         <a href="{{ route('admin.control') }}" class="flex items-center px-4 py-2 rounded-lg text-foreground bg-layer shadow-inner border border-divider/50">
           <i class="fas fa-layer-group mr-3 w-5 opacity-70"></i> Control
         </a>
-        <a href="{{ route('Admintransaction') }}" class="flex items-center px-4 py-2 rounded-lg text-foreground/80 hover:text-foreground hover:bg-layer transition">
+        <a href="{{ route('admin.transaction') }}" class="flex items-center px-4 py-2 rounded-lg text-foreground/80 hover:text-foreground hover:bg-layer transition">
           <i class="fas fa-user-friends mr-3 w-5 opacity-70"></i> Transactions
         </a>
         {{-- ✅ Tickets --}}
-        <a href="{{ route('admin.Admintickets') }}"
+        <a href="{{ route('admin.tickets') }}"
            class="flex items-center px-4 py-2 rounded-lg
-                  {{ request()->routeIs('admin.Admintickets') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
+                  {{ request()->routeIs('admin.tickets') ? 'text-foreground bg-layer shadow-inner border border-divider/50' : 'text-foreground/80 hover:text-foreground hover:bg-layer' }}">
           <i class="fas fa-ticket-alt mr-3 w-5 opacity-70"></i> Tickets
         </a>
       </nav>
@@ -143,7 +143,7 @@
         </span>
       </div>
 
-      <form id="themeForm" method="POST" action="{{ route('admin.updateTheme') }}" class="p-6">
+<form id="themeForm" method="POST" action="{{ route('admin.control.updateTheme') }}" class="p-6">
         @csrf
 
         @error('theme')
@@ -151,7 +151,7 @@
             {{ $message }}
           </div>
         @enderror
-        
+
 <div x-data="{ selected: '{{ $current }}' }"
      class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
   @foreach (['light','dark','ocean'] as $theme)

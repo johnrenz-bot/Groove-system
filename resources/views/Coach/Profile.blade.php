@@ -83,7 +83,7 @@
            class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
           Home
         </a>
-        <a href="{{ route('Talent') }}"
+        <a href="{{ route('talents') }}"
            class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
           Talents
         </a>
@@ -141,8 +141,8 @@
                 <p class="text-xs text-muted mt-0.5">#{{ $coach->coach_id ?? '0000' }} • {{ ucfirst($coach->role ?? 'coach') }}</p>
               </div>
               <div class="flex flex-col px-3 py-2">
-                <a href="{{ route('Profile') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-regular fa-user text-muted text-sm"></i><span class="text-sm">Profile</span></a>
-                <a href="{{ route('PROFILE.EDIT') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-solid fa-gear text-muted text-sm"></i><span class="text-sm">Settings</span></a>
+                <a href="{{ route('coach.profile') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-regular fa-user text-muted text-sm"></i><span class="text-sm">Profile</span></a>
+                <a href="{{ route('coach.profile.edit') }}" class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition"><i class="fa-solid fa-gear text-muted text-sm"></i><span class="text-sm">Settings</span></a>
               </div>
               <div class="border-t border-ui px-3 py-2">
                 <form method="POST" action="{{ route('logout') }}">@csrf
@@ -199,7 +199,7 @@
         </div>
 
         <div class="mt-4 md:mt-0">
-          <a href="{{ route('PROFILE.EDIT') }}"
+          <a href="{{ route('coach.profile.edit') }}"
              class="px-4 py-2 border border-divider/40 rounded-full hover:bg-layer text-foreground transition">
             Edit
           </a>
@@ -354,7 +354,7 @@
     </div>
 
     <!-- Body -->
-    <form action="{{ route('Coachprofile.Store') }}" method="POST" enctype="multipart/form-data" class="p-6 space-y-6">
+    <form action="{{ route('coachprofile.store') }}" method="POST" enctype="multipart/form-data" class="p-6 space-y-6">
       @csrf
 
       <!-- Upload area -->
@@ -714,7 +714,7 @@
         modalImage: '',
 
         loadPosts() {
-          fetch(@json(route('coach-profile-posts.fetch')))
+          fetch(@json(route('profile-posts.fetch')))
             .then(res => res.json())
             .then(data => { this.posts = data.posts ?? data ?? []; })
             .catch(err => console.error("Error fetching posts:", err));

@@ -274,7 +274,7 @@
                   <i class="fa-regular fa-user text-sm opacity-70"></i>
                   <span class="text-sm">Profile</span>
                 </a>
-                <a href="/client/profile/EDIT"
+                <a href="/client/profile/edit"
                    class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition">
                   <i class="fa-solid fa-gear text-sm opacity-70"></i>
                   <span class="text-sm">Settings</span>

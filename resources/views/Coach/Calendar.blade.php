@@ -115,7 +115,7 @@
            class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
           Home
         </a>
-        <a href="{{ route('Talent') }}"
+        <a href="{{ route('talents') }}"
            class="relative px-4 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-layer hover:border hover:border-divider/40 hover:shadow-md transition-all duration-300">
           Talents
         </a>

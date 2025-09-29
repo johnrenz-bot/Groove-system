@@ -181,7 +181,7 @@
                             <span class="text-sm">Profile</span>
                         </a>
 
-                           <a href="/client/profile/EDIT"
+                           <a href="/client/profile/edit"
                  class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition">
                 <i class="fa-solid fa-gear opacity-70 text-sm"></i><span class="text-sm">Settings</span>
               </a>
@@ -1079,6 +1079,8 @@ function clientAgreementModal(opts = {}) {
     hasSignature: !!opts.hasExistingClientSignature,
     editing: false,
     existingUrl: opts.existingClientSignatureUrl || '',
+        pdfUrl: '',  
+          openAgreementModal: false,
     init() {
       this.editing = !this.hasSignature;
       this.$watch('openAgreementModal', open => { open ? this.$nextTick(() => this.initPadIfNeeded()) : this.destroyPad(); });

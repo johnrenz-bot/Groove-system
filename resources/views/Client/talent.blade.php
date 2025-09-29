@@ -130,7 +130,7 @@
                  class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition">
                 <i class="fa-regular fa-user opacity-70 text-sm"></i><span class="text-sm">Profile</span>
               </a>
-              <a href="/client/profile/EDIT"
+              <a href="/client/profile/edit"
                  class="flex items-center gap-2 hover:bg-layer px-3 py-1.5 rounded-xl transition">
                 <i class="fa-solid fa-gear opacity-70 text-sm"></i><span class="text-sm">Settings</span>
               </a>
